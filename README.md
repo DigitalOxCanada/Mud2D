@@ -1,4 +1,7 @@
 # Mud2D
+
+[![Join the chat at https://gitter.im/Mud2D/Lobby](https://badges.gitter.im/Mud2D/Lobby.svg)](https://gitter.im/Mud2D/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Walkthrough for beginner coders for learning C# to make a game.
 
 # To Use
