@@ -1,23 +1,14 @@
-﻿using System;
+﻿using Mud2D.models;
+using System;
 
 namespace DigitalOx
 {
-    public class MapSettings
-    {
-        public int Width;
-        public int Height;
-        public string Name;
-        public int MaxPlayers;
-        public string Author;
-    }
-
     public class Mud2DGame
     {
-        static private MapSettings mapsettings = new MapSettings();
+        static public Map TheMap { get; set; }
 
         static private int Player1XPosition = 0;
         static private int Player1YPosition = 0;
-        static private char[,] Map;
         static private char[,] Players;
 
         /// <summary>
@@ -27,6 +18,9 @@ namespace DigitalOx
         static void Main(string[] args)
         {
             InitalizeMap();
+
+            Console.WriteLine("Press enter to continue");
+            Console.ReadKey();
 
             GameLoop();
         }
@@ -38,10 +32,10 @@ namespace DigitalOx
         {
             bool running = true;
 
-            while (running == true)
+            while (running)
             {
-                DrawMap();
-                var ch = Console.ReadKey(false).Key;
+                TheMap.Draw();
+                var ch = Console.ReadKey(true).Key;
                 switch (ch)
                 {
                     case ConsoleKey.Escape:
@@ -52,25 +46,25 @@ namespace DigitalOx
                         if (Player1YPosition > 0)
                         {
                             //if the space moving upwards is a blank space then move up
-                            if (Map[Player1YPosition - 1, Player1XPosition] == ' ')
+                            if (TheMap.GetTileAtPos(Player1XPosition, Player1YPosition - 1).GetType() == typeof(MapTileSpace))
                             {
                                 Player1YPosition--;
                             }
                         }
                         break;
                     case ConsoleKey.DownArrow:
-                        if (Player1YPosition < mapsettings.Height - 1)
+                        if (Player1YPosition < TheMap.Height - 1)
                         {
-                            if (Map[Player1YPosition + 1, Player1XPosition + 1] == ' ')
+                            if (TheMap.GetTileAtPos(Player1XPosition + 1, Player1YPosition + 1).GetType() == typeof(MapTileSpace))
                             {
                                 Player1YPosition++;
                             }
                         }
                         break;
                     case ConsoleKey.RightArrow:
-                        if (Player1XPosition < mapsettings.Width - 1)
+                        if (Player1XPosition < TheMap.Width - 1)
                         {
-                            if (Map[Player1YPosition, Player1XPosition + 1] == ' ')
+                            if (TheMap.GetTileAtPos(Player1XPosition + 1, Player1YPosition).GetType() == typeof(MapTileSpace))
                             {
                                 Player1XPosition++;
                             }
@@ -79,7 +73,7 @@ namespace DigitalOx
                     case ConsoleKey.LeftArrow:
                         if (Player1XPosition > 0)
                         {
-                            if (Map[Player1YPosition, Player1XPosition - 1] == ' ')
+                            if (TheMap.GetTileAtPos(Player1XPosition - 1, Player1YPosition).GetType() == typeof(MapTileSpace))
                             {
                                 Player1XPosition--;
                             }
@@ -95,36 +89,15 @@ namespace DigitalOx
             }
         }
 
-        private static void DrawMap()
-        {
-            Console.Clear();
-            for (int y = 0; y < mapsettings.Height; y++)
-            {
-                for (int x = 0; x < mapsettings.Width; x++)
-                {
-                    if (x == Player1XPosition && y == Player1YPosition)
-                    {
-                        Console.Write('1');
-                    }
-                    else
-                    {
-                        Console.Write(Map[y, x]);
-                    }
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine($"Player 1 X Position = {Player1XPosition + 1}");
-            Console.WriteLine($"Player 1 Y Position = {Player1YPosition + 1}");
-
-        }
 
         private static void InitalizeMap()
         {
             string[] mapLines = System.IO.File.ReadAllLines("maps/map1.txt");
-            mapsettings.Height = mapLines.Length;
-            mapsettings.Width = mapLines[0].Length;
-            Map = new char[mapsettings.Height, mapsettings.Width];
-            Players = new char[mapsettings.Height, mapsettings.Width];
+
+            //Create new map instance by dimenions
+            TheMap = new Map(mapLines[0].Length, mapLines.Length);
+
+            Players = new char[TheMap.Height, TheMap.Width];
 
             //FIRST TIME ANALYZE MAP DATA
             for (int yPos = 0; yPos < mapLines.Length; yPos++)
@@ -137,16 +110,10 @@ namespace DigitalOx
                     continue;
                 }
 
-                //CHECK FOR line starting with # = wall
-                if (currentLine[0] != '#')
-                {
-                    continue;
-                }
-
                 //create the Map 2d array data from the current line char by char
-                for (int xPos = 0; xPos < mapsettings.Width; xPos++)
+                for (int xPos = 0; xPos < TheMap.Width; xPos++)
                 {
-                    Map[yPos, xPos] = currentLine[xPos];
+                    TheMap.CreateTile(currentLine[xPos], xPos, yPos);
                 }
 
                 //check if player 1 is in this line
@@ -154,15 +121,12 @@ namespace DigitalOx
                 if(foundp1!=-1) {
                     Player1XPosition = foundp1;
                     Player1YPosition = yPos;
-
-                    //clear out the player 1 from the map so the map no longer holds the player data
-                    //player data will be on the player array from now on
-                    Map[Player1YPosition, Player1XPosition] = ' ';
+                    Players[yPos, foundp1] = '1';
                 }
 
             }
 
-            Console.WriteLine($"Map is loaded...size: [{mapsettings.Width} x {mapsettings.Height}]");
+            Console.WriteLine($"Map is loaded...size: [{TheMap.Width} x {TheMap.Height}]");
             Console.WriteLine($"Player 1 location: [{Player1XPosition+1}, {Player1YPosition+1}]");
         }
     }
