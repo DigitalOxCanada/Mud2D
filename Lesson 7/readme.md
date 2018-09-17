@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lesson Notes
 
 1. Replaced usage of GetType() and typeof() with object boolean IsWalkable.
@@ -11,3 +12,17 @@
 5. Player and monsters are now drawn after the map using Console.SetCursorLocation().
 
 6. Added stub for Monster AI to be called.
+=======
+# testing
+
+## testing
+
+### testing
+
+----
+test
+
+
+
+This is our *first* project. **woohoo**.
+>>>>>>> 4c4388af791c5718fe4a26b8dff267c865bff09c
