@@ -1,16 +1,16 @@
-# Heading 1
-This is similar to html H1
+# Lesson Notes
 
-## Heading 2
-This is similar to html H2
+1. Create map in a file and make build process copy map to output folder in the project file.
+```html
+<ItemGroup>
+ <None Update="maps\map1.txt">
+  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+ </None>
+</ItemGroup>
+```  
 
-### Heading 3
-Test
+2. Read a map from a text file instead of inline.
+   
+3. Faster method to find where the player is located on the map.
 
-
-----
-test
-
-
-
-This is our *first* project. **woohoo**.
+4. Output the map to the screen.

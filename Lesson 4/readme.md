@@ -1,12 +1,7 @@
-# testing
+# Lesson Notes
 
-## testing
+1. Make a bigger map.
 
-### testing
+2. Turn Players into a 2d array that overlap the map 2d array.
 
-----
-test
-
-
-
-This is our *first* project. **woohoo**.
+3. Add constraints to player movement to only open spaces.

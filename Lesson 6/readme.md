@@ -1,12 +1,3 @@
-# testing
+# Lesson Notes
 
-## testing
-
-### testing
-
-----
-test
-
-
-
-This is our *first* project. **woohoo**.
+1. Added Player object/class and draws itself like the map tiles do.
