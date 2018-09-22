@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Mud2D specific files
+logs/
+
 # User-specific files
 *.suo
 *.user
@@ -328,3 +331,4 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/Lesson-10/.vscode

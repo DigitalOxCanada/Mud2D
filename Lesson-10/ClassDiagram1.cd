@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mud2D.models.Map">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAABAAAIAAAgAAAAEQAAAEAAAIBAAAAAAAQCAQ=</HashCode>
+      <FileName>models\Map.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ThePlayer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tiles" />
+      <Property Name="Monsters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mud2D.models.MapTile" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAIAaAA=</HashCode>
+      <FileName>models\MapTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileDoor" Collapsed="true">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileSpace" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileStairs" Collapsed="true">
+    <Position X="9.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileStairs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileWall" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.Monster">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAQAAAAAAACAAAQBAAAIAAABAAAAAABBaEA=</HashCode>
+      <FileName>models\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.Player">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAECAAAQAAAAAAAABAAAAAABBYEE=</HashCode>
+      <FileName>models\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Mud2D.models.PlayerMovement">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>models\Player.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
