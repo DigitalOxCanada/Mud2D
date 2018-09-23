@@ -5,6 +5,7 @@
 
 # Mud2D specific files
 logs/
+**/.vscode/
 
 # User-specific files
 *.suo
@@ -331,5 +332,3 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-/Lesson-10/.vscode
-/Lesson-11/.vscode
