@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mud2D.models.GameEngine">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Mud2D.models.GameEngine.LevelYaml">
+        <TypeIdentifier>
+          <NewMemberFileName>models\GameEngine.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AASQAAAABAwAKABAgAAAAEQCAAEEAAIBAAACAAAQCAU=</HashCode>
+      <FileName>models\GameEngine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MessageBrd" />
+      <Property Name="ThePlayer" />
+      <Property Name="MonsterMgr" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tiles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mud2D.models.MapTile">
+    <Position X="8.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAgBAAAAAAAAAAAAAAAAAAAAAAAIQaAA=</HashCode>
+      <FileName>models\MapTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileDoor" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileSpace" Collapsed="true">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileStairs" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileStairs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MapTileWall" Collapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MapTileWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.Monster">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAQAAABAAACAAAQBAAAIAAAAAAAAAABBaEA=</HashCode>
+      <FileName>models\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.Player">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAECAAAQAAAAAAAAAAAAAAABBYEE=</HashCode>
+      <FileName>models\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MonstersDB">
+    <Position X="11.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>models\MonstersDB.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MonsterData" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mud2D.models.MonsterDBModel">
+    <Position X="14" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAAACEA=</HashCode>
+      <FileName>models\MonstersDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mud2D.models.MonsterManager">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAIAAAAAEAAAAAAAAAACIAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\MonsterManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MonstersDB" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Monsters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mud2D.models.MessageBoard">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Mud2D.models.MessageBoard.Message">
+        <TypeIdentifier>
+          <NewMemberFileName>models\MessageBoard.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAABAAAAAAAAAAAAAAABAgAIAAQAAAAA=</HashCode>
+      <FileName>models\MessageBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Mud2D.models.PlayerMovement">
+    <Position X="6.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>models\Player.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
