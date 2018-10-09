@@ -7,3 +7,5 @@
 3. Redid player input to handle attacking monsters.
 
 4. Monsters lose health when attacked and can die.
+
+![Screenshot](Annotation.png)

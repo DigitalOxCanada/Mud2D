@@ -7,3 +7,6 @@
 3. Monsters attack.
 
 4. Player can now die.
+
+![Screenshot](Annotation.png)
+

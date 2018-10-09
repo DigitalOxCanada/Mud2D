@@ -8,3 +8,5 @@
 
 4. Save and Load game.  
 
+![Screenshot](Annotation1.png)  
+![Screenshot](Annotation2.png)  
