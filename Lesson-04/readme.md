@@ -4,4 +4,6 @@
 
 2. Turn Players into a 2d array that overlap the map 2d array.
 
-3. Add constraints to player movement to only open spaces.
+3. Add constraints to player movement to only open spaces.  
+
+![Screenshot](Annotation.png)

@@ -14,3 +14,4 @@
 
 7. Added Class Diagram to show visual representation of classes.
 
+![Screenshot](Annotation.png)

@@ -15,6 +15,8 @@
 
 4. Output the map to the screen.
 
+![Screenshot](Annotation.png)
+
 
 # Q&A
 **Q** Why switch from `string[] mapLines = {
